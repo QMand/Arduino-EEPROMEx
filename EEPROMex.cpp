@@ -314,6 +314,13 @@ bool EEPROMClassEx::updateDouble(int address, double value)
 	return (updateBlock<double>(address, value)!=0);
 }
 
+void EEPROMClassEx::eraseEEPROM()
+{
+	for (int i = 0; i < _memSize; i++)
+    {
+      EEPROM.write(i, 0);
+    }
+}
 /**
  * Performs check to see if writing to a memory address is allowed
  */
