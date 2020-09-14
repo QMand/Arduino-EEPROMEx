@@ -99,6 +99,7 @@ class EEPROMClassEx
 	bool 	 updateFloat(int, float);
 	bool 	 updateDouble(int, double);
 
+	void 	 eraseEEPROM();
 	
     // Use template for other data formats
 
